@@ -1,0 +1,66 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Fazer Cadastro</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+    <ion-list >
+
+        <ion-item>
+            <ion-label stacked>nome</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>email</ion-label>
+            <ion-input type="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>cpf</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>data de nascimento</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+            <span class="input-label">Conhecimento na área</span>
+            <select>
+                <option>Baixo</option>
+                <option>Médio</option>
+                <option>Alto</option>
+            </select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>telefone</ion-label>
+            <ion-input type="tel"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>endereço</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>senha</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label stacked>confirmação de senha</ion-label>
+            <ion-input type="password"></ion-input>
+        </ion-item>
+
+    </ion-list>
+
+    <button ion-button clear (click)="popPage()">Cancelar</button>
+
+    <button ion-button (click)="pushPage()">Realizar Cadastro</button>
+
+</ion-content>

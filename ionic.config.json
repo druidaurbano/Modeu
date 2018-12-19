@@ -1,0 +1,7 @@
+{
+  "name": "arborizacao-urbana",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
