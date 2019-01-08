@@ -14,17 +14,20 @@
 
 
 <ion-content>
+
+      <img class="marca" src="assets/imgs/marca.png" alt="">
+  
   <ion-item>
-      <ion-label color="primary" stacked>NOME:</ion-label>
+      <ion-label stacked>NOME:</ion-label>
      <ion-input placeholder="Nome de usuário"></ion-input>
    </ion-item>
 
   <ion-item>
-    <ion-label color="primary" stacked>SENHA:</ion-label>
+    <ion-label stacked>SENHA:</ion-label>
     <ion-input type="password" placeholder="Senha de usuário"></ion-input>
   </ion-item>
-  <div text-center>
-  <button margin-top ion-button secondary (click)="goToMenuPage()">Entrar</button>
+  <div padding>
+  <button class="botao"  margin-top ion-button secondary block (click)="goToMenuPage()">Entrar</button>
 </div>
   
 </ion-content>
