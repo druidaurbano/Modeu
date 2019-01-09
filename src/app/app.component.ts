@@ -1,3 +1,4 @@
+import { CadastroPage } from './../pages/cadastro/cadastro';
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';

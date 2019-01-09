@@ -1,3 +1,5 @@
+import { MapaPage } from './../pages/mapa/mapa';
+import { CadastroPage } from './../pages/cadastro/cadastro';
 import { LoginPage } from './../pages/login/login';
 import { Menu2Page } from './../pages/menu2/menu2';
 import { BrowserModule } from '@angular/platform-browser';
@@ -17,7 +19,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     Menu2Page,
-    LoginPage
+    LoginPage,
+    CadastroPage,
+    MapaPage
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     ListPage,
     Menu2Page,
-    LoginPage
+    LoginPage,
+    CadastroPage,
+    MapaPage
   ],
   providers: [
     StatusBar,

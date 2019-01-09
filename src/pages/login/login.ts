@@ -1,3 +1,5 @@
+import { MapaPage } from './../mapa/mapa';
+import { CadastroPage } from './../cadastro/cadastro';
 import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
@@ -27,4 +29,11 @@ export class LoginPage {
     this.navCtrl.push(HomePage);
   }
 
+  goToCadastroPage(){
+    this.navCtrl.push(CadastroPage);
+  }
+
+  goToMapaPage(){
+    this.navCtrl.push(MapaPage);
+  }
 }

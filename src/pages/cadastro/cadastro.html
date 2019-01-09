@@ -1,0 +1,54 @@
+<!--
+  Generated template for the CadastroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title></ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+    <ion-item-divider color="light">Dados Pessoais</ion-item-divider>
+<!-- nome de novo cadastro-->
+    <ion-item>
+        <ion-input type="text" placeholder="Nome Completo"></ion-input>
+      </ion-item>
+    
+<!-- Email de novo cadastro-->
+      <ion-item>
+        <ion-input type="text" placeholder="E-mail"></ion-input>
+      </ion-item>
+<!-- data de nascimento-->
+<ion-item>
+    <ion-input type="text" placeholder="Data de nascimento DD/MM/AA"></ion-input>
+</ion-item>
+
+<ion-item>
+    <ion-label>Conhecimento na área</ion-label>
+    <ion-select [(ngModel)]="gender">
+      <ion-option value="b">Baixo</ion-option>
+      <ion-option value="m">Médio</ion-option>
+      <ion-option value="a">Alto</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Senha para login:</ion-label>
+      <ion-input type="password"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label floating>repetir senha:</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <div padding>
+          <button class="botao" margin-top ion-button secondary block (click)="goToLoginPage()" round >Confirmar cadastro</button>
+        </div>
+
+</ion-content>
