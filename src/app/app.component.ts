@@ -15,6 +15,7 @@ import { PlantioPage } from './../pages/plantio/plantio';
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
@@ -23,13 +24,13 @@ export class MyApp {
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
-this.pages = [
-  {title: 'Glossário', component: GlossarioPage},
-  {title: 'Plantio e Manutenção', component: PlantioPage},
-  {title: 'Meu Album', component: AlbumPage},
-  {title: 'Editar Perfil', component: HomePage},
-  {title: 'Sair', component: HomePage}
-];
+    this.pages = [
+      {title: 'Glossário', component: GlossarioPage},
+      {title: 'Plantio e Manutenção', component: PlantioPage},
+      {title: 'Meu Álbum', component: AlbumPage},
+      {title: 'Editar Perfil', component: HomePage},
+      {title: 'Sair', component: HomePage}
+    ];
 
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
@@ -39,9 +40,9 @@ this.pages = [
     });
   }
 
-openPage(page: {title: string, component: any}): void{
-  this.nav.setRoot(page.component);
-}
+  openPage(page: {title: string, component: any}): void{
+    this.nav.push(page.component);
+  }
 
 }
 

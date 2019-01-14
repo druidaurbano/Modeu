@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import {Geolocation} from '@ionic-native/geolocation';
 
 import { MyApp } from './app.component';
 import { AlbumPage } from './../pages/album/album';
@@ -12,6 +13,12 @@ import { HomePage } from '../pages/home/home';
 import { MapaPage } from './../pages/mapa/mapa';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { PlantioPage } from './../pages/plantio/plantio';
+
+import { JacarandaPage } from './../pages/jacaranda/jacaranda';
+import { NoivinhaPage } from './../pages/noivinha/noivinha';
+import { IpePage } from '../pages/ipe/ipe';
+import { ExtremosaPage } from '../pages/extremosa/extremosa';
+import { OitiPage } from '../pages/oiti/oiti';
 
 
 
@@ -24,7 +31,13 @@ import { PlantioPage } from './../pages/plantio/plantio';
     HomePage,
     MapaPage,
     PerfilPage,
-    PlantioPage
+    PlantioPage,
+    
+    NoivinhaPage,
+    IpePage,
+    JacarandaPage,
+    ExtremosaPage,
+    OitiPage
   ],
   imports: [
     BrowserModule,
@@ -39,11 +52,18 @@ import { PlantioPage } from './../pages/plantio/plantio';
     HomePage,
     MapaPage,
     PerfilPage,
-    PlantioPage
+    PlantioPage,
+
+    NoivinhaPage,
+    IpePage,
+    JacarandaPage,
+    ExtremosaPage,
+    OitiPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
