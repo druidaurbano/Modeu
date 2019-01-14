@@ -3,15 +3,14 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import {Geolocation} from '@ionic-native/geolocation';
-
 import { MyApp } from './app.component';
+//import {Geolocation} from '@ionic-native/geolocation';
 import { AlbumPage } from './../pages/album/album';
 import { CadastroPage } from './../pages/cadastro/cadastro';
 import { GlossarioPage } from './../pages/glossario/glossario';
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from './../pages/login/login';
 import { MapaPage } from './../pages/mapa/mapa';
-import { PerfilPage } from '../pages/perfil/perfil';
 import { PlantioPage } from './../pages/plantio/plantio';
 
 import { JacarandaPage } from './../pages/jacaranda/jacaranda';
@@ -29,10 +28,9 @@ import { OitiPage } from '../pages/oiti/oiti';
     CadastroPage,
     GlossarioPage,
     HomePage,
+    LoginPage,
     MapaPage,
-    PerfilPage,
     PlantioPage,
-    
     NoivinhaPage,
     IpePage,
     JacarandaPage,
@@ -50,10 +48,9 @@ import { OitiPage } from '../pages/oiti/oiti';
     CadastroPage,
     GlossarioPage,
     HomePage,
+    LoginPage,
     MapaPage,
-    PerfilPage,
     PlantioPage,
-
     NoivinhaPage,
     IpePage,
     JacarandaPage,
@@ -63,7 +60,7 @@ import { OitiPage } from '../pages/oiti/oiti';
   providers: [
     StatusBar,
     SplashScreen,
-    Geolocation,
+    // Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

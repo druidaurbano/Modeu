@@ -1,33 +1,12 @@
-<ion-header style="text-align: center">
-    <ion-navbar >
-        <ion-title>MODEU</ion-title>
-    </ion-navbar>
+<ion-header>
+    <ion-toolbar>
+        <button ion-button menuToggle icon-only>
+            <ion-icon name='menu'></ion-icon>
+        </button>
+        <ion-title>Menu</ion-title>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    
-    <ion-list style="text-align:center">
-        <ion-item>
-            <ion-label floating>Username</ion-label>
-            <ion-input type="text"></ion-input>
-        </ion-item>
-  
-        <ion-item>
-            <ion-label floating>Password</ion-label>
-            <ion-input type="password"></ion-input>
-        </ion-item>
-  
-    </ion-list>
-  
-    <ion-grid style="text-align:center">
-        <ion-row>
-            <ion-col col-12><button ion-button (click)="onPerfil()">Login</button></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-12><button ion-button clear (click)="onCadastro()">Fazer Cadastro</button></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col col-12><button ion-button clear (click)="onMapa()">Visualizar Mapa</button></ion-col>
-        </ion-row>
-    </ion-grid>
+    <div id="map"></div>
 </ion-content>

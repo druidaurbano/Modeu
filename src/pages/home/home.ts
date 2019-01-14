@@ -1,31 +1,51 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular'; 
+// import { Geolocation } from '@ionic-native/geolocation';
+import { Component, OnInit } from '@angular/core';
+import { NavController } from 'ionic-angular';
 
-import { CadastroPage } from './../cadastro/cadastro';
-import { MapaPage } from './../mapa/mapa';
-import { PerfilPage } from './../perfil/perfil';
+//var permissions = cordova.plugins.permissions;
+declare var google;
 
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html'
+    selector: 'page-home',
+    templateUrl: 'home.html'
 })
 
-export class HomePage {
+export class HomePage implements OnInit{
 
-  
-  constructor(public navCtrl: NavController) {    //NavController controla a navegação da aplicação
-  
-  }
+    constructor(public navCtrl: NavController) {
+    
+    }
 
-  onCadastro() : void{
-    this.navCtrl.push(CadastroPage);
-  }
+   /* this.geolocation.getCurrentPosition().then((resp) => {
+        // resp.coord.latitude
+        // resp.coord.longitude
+    }).catch((error) => {
+        console.log('Error getting location', error);
+    });
 
-  onPerfil() : void{
-    this.navCtrl.push(PerfilPage);
-  }
+    let watch = this.geolocation.watchPosition();
+    watch.subscribe((data) => {
+        //data can be a set of coordinates, or an error (if an error occurred).
+        // data.coords.latitude
+        // data.coords.longitude 
+    });*/
 
-  onMapa() : void{
-    this.navCtrl.push(MapaPage);
-  }
+    ngOnInit(){
+        this.loadMap();
+    }
+
+    async loadMap(){
+        //const rta = await this.geolocation.getCurrentPosition();
+        const myLatLng = {
+            lat: -23.5635795,
+            lng: -46.656248
+        };
+        console.log(myLatLng);
+        const mapEle: HTMLElement = document.getElementById('map');
+        const map = new google.maps.Map(mapEle,{
+            center: myLatLng,
+            zoom: 12
+        });
+    }
+
 }

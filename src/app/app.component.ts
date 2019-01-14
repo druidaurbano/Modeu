@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -8,9 +9,8 @@ import { CadastroPage } from './../pages/cadastro/cadastro';
 import { GlossarioPage } from './../pages/glossario/glossario';
 import { HomePage } from '../pages/home/home';
 import { MapaPage } from './../pages/mapa/mapa';
-import { PerfilPage } from './../pages/perfil/perfil';
-import { PlantioPage } from './../pages/plantio/plantio';
 
+import { PlantioPage } from './../pages/plantio/plantio';
 
 @Component({
   templateUrl: 'app.html'
@@ -20,7 +20,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
   pages:[{title: string, component: any}];
-  rootPage = HomePage;
+  rootPage = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
@@ -28,8 +28,8 @@ export class MyApp {
       {title: 'Glossário', component: GlossarioPage},
       {title: 'Plantio e Manutenção', component: PlantioPage},
       {title: 'Meu Álbum', component: AlbumPage},
-      {title: 'Editar Perfil', component: HomePage},
-      {title: 'Sair', component: HomePage}
+      {title: 'Editar Perfil', component: LoginPage},
+      {title: 'Sair', component: LoginPage}
     ];
 
     platform.ready().then(() => {

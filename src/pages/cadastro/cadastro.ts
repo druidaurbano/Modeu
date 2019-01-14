@@ -1,5 +1,5 @@
+import { LoginPage } from './../login/login';
 import { HomePage } from './../home/home';
-import { PerfilPage } from './../perfil/perfil';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -15,11 +15,15 @@ export class CadastroPage {
   }
 
   pushPage(): void{
-    this.navCtrl.push(PerfilPage);
+    this.navCtrl.push(HomePage);
   }
 
   popPage(): void{
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(LoginPage);
+  }
+
+  goToLoginPage(){
+    this.navCtrl.push(LoginPage);
   }
 
 }
