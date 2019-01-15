@@ -13,10 +13,16 @@ import { LoginPage } from './../pages/login/login';
 import { MapaPage } from './../pages/mapa/mapa';
 import { PlantioPage } from './../pages/plantio/plantio';
 
+
+//lista das páginas de Plantas em ordem alfabética
+import { AlfeneiroPage } from './../pages/alfeneiro/alfeneiro';
+import { AroeiraPage } from './../pages/aroeira/aroeira';
+import { CassiaPage } from './../pages/cassia/cassia';
+import { ExtremosaPage } from '../pages/extremosa/extremosa';
+import { IpePage } from '../pages/ipe/ipe';
+import { IperoxoPage } from './../pages/iperoxo/iperoxo';
 import { JacarandaPage } from './../pages/jacaranda/jacaranda';
 import { NoivinhaPage } from './../pages/noivinha/noivinha';
-import { IpePage } from '../pages/ipe/ipe';
-import { ExtremosaPage } from '../pages/extremosa/extremosa';
 import { OitiPage } from '../pages/oiti/oiti';
 
 
@@ -31,10 +37,14 @@ import { OitiPage } from '../pages/oiti/oiti';
     LoginPage,
     MapaPage,
     PlantioPage,
-    NoivinhaPage,
-    IpePage,
-    JacarandaPage,
+    AlfeneiroPage,
+    AroeiraPage,
+    CassiaPage,
     ExtremosaPage,
+    IpePage,
+    IperoxoPage,
+    JacarandaPage,
+    NoivinhaPage,
     OitiPage
   ],
   imports: [
@@ -51,10 +61,14 @@ import { OitiPage } from '../pages/oiti/oiti';
     LoginPage,
     MapaPage,
     PlantioPage,
-    NoivinhaPage,
-    IpePage,
-    JacarandaPage,
+    AlfeneiroPage,
+    AroeiraPage,
+    CassiaPage,
     ExtremosaPage,
+    IpePage,
+    IperoxoPage,
+    JacarandaPage,
+    NoivinhaPage,
     OitiPage
   ],
   providers: [
