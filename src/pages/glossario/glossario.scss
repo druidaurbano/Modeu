@@ -3,7 +3,10 @@ page-glossario {
 
         ion-card {
           position: relative;
+          width: 90%;
+          height: 30%;
           text-align: center;
+          color: rgba(46, 125, 50, 0.233)
         }
       
         .card-title {
@@ -12,7 +15,7 @@ page-glossario {
           font-size: 2.0em;
           width: 100%;
           font-weight: bold;
-          color: #fff;
+          color: #2E7D32
         }
 
         .card-subtitle {
@@ -20,7 +23,7 @@ page-glossario {
             position: absolute;
             top: 52%;
             width: 100%;
-            color: #fff;
+            color: rgb(255, 0, 0);
           }
         
         }
