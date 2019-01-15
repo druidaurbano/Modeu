@@ -12,7 +12,7 @@
       <img class="marca" src="assets/imgs/marca.png" alt="">
   
   <ion-item>
-      <ion-label floating>Usuário</ion-label>
+      <ion-label floating posicion>Usuário</ion-label>
      <ion-input type="text"></ion-input>
    </ion-item>
 
@@ -23,12 +23,12 @@
 
   <!-- Botão para fazer login-->
   <div padding>
-    <button class="botao"  margin-top ion-button secondary block (click)="goToHomePage()" round >Entrar</button>
+    <button class="botao" margin-top secondary block ion-button (click)="goToHomePage()" round >Entrar</button>
   </div>
 
   <!-- link para cadastrar-->
   <div padding>
-      <button ion-button color="danger" block (click)="goToCadastroPage()" clear >Criar uma conta</button>
-      <button ion-button color="danger" block (click)="goToMapaPage()" clear >Visualizar mapa</button>
+      <button class="opcoes" ion-button color="danger" block (click)="goToCadastroPage()" clear >Criar uma conta</button>
+      <button class="opcoes"ion-button color="danger" block (click)="goToMapaPage()" clear >Visualizar mapa</button>
   </div>
 </ion-content>

@@ -6,56 +6,63 @@
 
 
 <ion-content>
-    <ion-list >
+    <ion-list>
       <ion-item-divider color="light">Dados Pessoais</ion-item-divider>
 
       <!-- nome de novo cadastro-->
-      <ion-label floating>Nome completo</ion-label>
-      <ion-input type="text"></ion-input>
-   
+        <ion-item>
+            <ion-label floating>Nome completo</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
       <!-- data de nascimento-->
-          <ion-item>
-              <ion-label stacked> Data de Nascimento</ion-label>
-              <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
-            </ion-item>
-   
+        <ion-item>
+            <ion-label floating> Data de Nascimento</ion-label>
+            <ion-datetime displayFormat="DD/MM/YYYY" [(ngModel)]="myDate"></ion-datetime>
+        </ion-item>
+   <!--stacked-->
       <!-- Conhecimentos na area-->      
-      <ion-item>
-          <ion-label>Conhecimento na área</ion-label>
-          <ion-select [(ngModel)]="gender">
-            <ion-option value="b">Baixo</ion-option>
-            <ion-option value="m">Médio</ion-option>
-            <ion-option value="a">Alto</ion-option>
-          </ion-select>
+        <ion-item>
+            <ion-label >Conhecimento na área</ion-label>
+                <ion-select [(ngModel)]="gender">
+                    <ion-option value="b">Baixo</ion-option>
+                    <ion-option value="m">Médio</ion-option>
+                    <ion-option value="a">Alto</ion-option>
+                </ion-select>
         </ion-item>
     
         <!-- CPF-->
-      <ion-label floating>CPF</ion-label>
-      <ion-input type="text"></ion-input>
-    
-      <!-- telefone-->
-      <ion-label floating >Telefone</ion-label>
-      <ion-input type="tel"></ion-input>
-          
-      <!-- endereço-->
-      <ion-label floating>Endereço</ion-label>
-      <ion-input type="text"></ion-input>
+        <ion-item>
+            <ion-label floating>CPF</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
+
+        <!-- telefone-->
+        <ion-item>
+            <ion-label floating >Telefone</ion-label>
+            <ion-input type="tel"></ion-input>
+        </ion-item>
+
+        <!-- endereço-->
+        <ion-item>
+            <ion-label floating>Endereço</ion-label>
+            <ion-input type="text"></ion-input>
+        </ion-item>
 
       <!-- senha-->
         <ion-item>
             <ion-label floating>Senha para login:</ion-label>
             <ion-input type="password"></ion-input>
-          </ion-item>
+        </ion-item>
 
       <!-- repetir senha-->      
           <ion-item>
               <ion-label floating>repetir senha:</ion-label>
               <ion-input type="password"></ion-input>
             </ion-item>
-      
+            
+            <button class="cancel" ion-button color="danger" clear (click)="popPage()">Cancelar</button>
+            <button class="botao2" ion-button clear (click)="pushPage()">Confirmar</button>
+        <!--margin-top secondary -->
     </ion-list>
-
-    <button ion-button clear (click)="popPage()">Cancelar</button>
-    <button class="botao" margin-top ion-button secondary block (click)="pushPage()" round >Confirmar cadastro</button>
-
+   
 </ion-content>

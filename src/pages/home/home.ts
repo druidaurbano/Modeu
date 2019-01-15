@@ -37,14 +37,14 @@ export class HomePage implements OnInit{
     async loadMap(){
         //const rta = await this.geolocation.getCurrentPosition();
         const myLatLng = {
-            lat: -23.5635795,
-            lng: -46.656248
+            lat: -2.4187609,
+            lng: -54.7410495
         };
         console.log(myLatLng);
         const mapEle: HTMLElement = document.getElementById('map');
         const map = new google.maps.Map(mapEle,{
             center: myLatLng,
-            zoom: 12
+            zoom: 17
         });
     }
 
