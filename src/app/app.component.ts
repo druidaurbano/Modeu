@@ -1,7 +1,7 @@
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
+import { StatusBar } from '@ionic-native/status-StatusBar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { AlbumPage } from './../pages/album/album';
