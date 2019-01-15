@@ -2,10 +2,6 @@ page-login {
 
 }
 
-ion-content{
-    margin-top: 30px;
-}
-
 ion-label{
     color: #2E7D32;    
 }
@@ -20,19 +16,8 @@ ion-item{
     color: #ffffff;
 }
 
-.botao2{
-    margin: 10px;
-    background-color: #2e7d32f6;
-    color: #ffffff;
-}
-
-.cancel{
-    margin: 20px;
-    background-color: #d7dbd763;
-    color: #2E7D32;
-}
-
 .opcoes{
+    margin: 10px;
     color: #2E7D32;
 }
 
@@ -40,5 +25,5 @@ ion-item{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 6em;
+    width: 9em;
 }
