@@ -1,3 +1,5 @@
+import { PerfilPage } from './../pages/perfil/perfil';
+import { SobrePage } from './../pages/sobre/sobre';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -45,7 +47,9 @@ import { OitiPage } from '../pages/oiti/oiti';
     IperoxoPage,
     JacarandaPage,
     NoivinhaPage,
-    OitiPage
+    OitiPage,
+    SobrePage,
+    PerfilPage
   ],
   imports: [
     BrowserModule,
@@ -69,7 +73,9 @@ import { OitiPage } from '../pages/oiti/oiti';
     IperoxoPage,
     JacarandaPage,
     NoivinhaPage,
-    OitiPage
+    OitiPage,
+    SobrePage,
+    PerfilPage
   ],
   providers: [
     StatusBar,

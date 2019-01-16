@@ -1,3 +1,5 @@
+import { PerfilPage } from './../pages/perfil/perfil';
+import { SobrePage } from './../pages/sobre/sobre';
 import { StatusBar } from '@ionic-native/status-bar';
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
@@ -28,7 +30,8 @@ export class MyApp {
       {title: 'Glossário', component: GlossarioPage},
       {title: 'Plantio e Manutenção', component: PlantioPage},
       {title: 'Meu Álbum', component: AlbumPage},
-      {title: 'Editar Perfil', component: LoginPage},
+      {title: 'Editar Perfil', component: PerfilPage},
+      {title: 'Sobre', component: SobrePage},
       {title: 'Sair', component: LoginPage}
     ];
 
