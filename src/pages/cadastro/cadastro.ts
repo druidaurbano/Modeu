@@ -1,32 +1,68 @@
 import { LoginPage } from './../login/login';
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+
+//firebase
+import { AngularFireAuth } from '@angular/fire/auth';
+
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
-@IonicPage()
 @Component({
   selector: 'page-cadastro',
-  templateUrl: 'cadastro.html',
+  templateUrl: 'cadastro.html'
 })
+
 export class CadastroPage {
 
   registerForm: FormGroup;
-  constructor(public navCtrl: NavController,
-    public navParams: NavParams,
-    public Formbuilder: FormBuilder
-    ) {
-      this.registerForm = this.Formbuilder.group({
-        name: [null, [Validators.required, Validators.minLength(4)]],
-        email: [null, [Validators.required, Validators.email]],
-        password: [null, [Validators.required, Validators.minLength(4)]],
-        confirmPassword: [null, [Validators.required, Validators.minLength(4)]]
 
+  constructor(
+    public navCtrl: NavController,
+    public formbuilder: FormBuilder,
+    public afAuth: AngularFireAuth
+  ) {
+    this.registerForm = this.formbuilder.group({
+      nome: [null, [Validators.required, Validators.minLength(5)]],
+      nascimento: [null, [Validators.required]],
+      cpf: [null, [Validators.required, Validators.minLength(11)]],
+      telefone: [null, [Validators.required, Validators.minLength(9)]],
+      endereco: [null,[Validators.required]],
+      email: [null, [Validators.required, Validators.email]],
+      senha: [null, [Validators.required, Validators.minLength(8)]],
+      confirmarsenha: [null, [Validators.required, Validators.minLength(8)]]
+    })
+  }
 
+  submitForm(){
+    this.afAuth.auth.createUserWithEmailAndPassword(
+      this.registerForm.value.email, this.registerForm.value.senha)
+      .then((response) => {
+        console.log('Criou usuario');
+      })
+      .catch((error) => {
+        console.log('Deu erro', error);
       })
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CadastroPage');
+/*
+  submitForm (){
+    this.afAuth.auth.createUserWithEmailAndPassword(
+      this.registerForm.value.email, this.registerForm.value.password)
+      .then((response) => {
+        console.log('Criou usuário');
+      })
+      .catch((error) => {
+        console.log('Deu erro', error);
+      })
+  }
+*/
+  pushPage(): void{
+    this.navCtrl.push(HomePage);
+  }
+
+  popPage(): void{
+    this.navCtrl.setRoot(LoginPage);
   }
 
   goToLoginPage(){

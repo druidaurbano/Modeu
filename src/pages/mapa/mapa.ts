@@ -1,25 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the MapaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+//var permissions = cordova.plugins.permissions;
+declare var google;
 
 @IonicPage()
+
 @Component({
   selector: 'page-mapa',
   templateUrl: 'mapa.html',
 })
-export class MapaPage {
+export class MapaPage implements OnInit{
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
+  ngOnInit(){
+    this.loadMap();
+}
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad MapaPage');
-  }
+async loadMap(){
+  //const rta = await this.geolocation.getCurrentPosition();
+  const myLatLng = {
+      lat: -2.4187609,
+      lng: -54.7410495
+  };
+  console.log(myLatLng);
+  const mapEle: HTMLElement = document.getElementById('map');
+  const map = new google.maps.Map(mapEle,{
+      center: myLatLng,
+      zoom: 17
+  });
+}
 
 }
