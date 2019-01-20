@@ -25,7 +25,7 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
-  goToMenuPage(){
+  goToHomePage(){
     this.navCtrl.push(HomePage);
   }
 

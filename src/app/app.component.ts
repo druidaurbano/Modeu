@@ -1,46 +1,51 @@
-import { CadastroPage } from './../pages/cadastro/cadastro';
+import { PerfilPage } from './../pages/perfil/perfil';
+import { SobrePage } from './../pages/sobre/sobre';
+import { StatusBar } from '@ionic-native/status-bar';
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { AlbumPage } from './../pages/album/album';
+import { CadastroPage } from './../pages/cadastro/cadastro';
+import { GlossarioPage } from './../pages/glossario/glossario';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { MapaPage } from './../pages/mapa/mapa';
+
+import { PlantioPage } from './../pages/plantio/plantio';
 
 @Component({
   templateUrl: 'app.html'
 })
+
 export class MyApp {
+
   @ViewChild(Nav) nav: Nav;
+  pages:[{title: string, component: any}];
+  rootPage = LoginPage;
 
-  rootPage: any = LoginPage;
+  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
-  pages: Array<{title: string, component: any}>;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
-    this.initializeApp();
-
-    // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Menu Inicial', component: HomePage },
-      { title: 'Lista', component: ListPage }
+      {title: 'Glossário', component: GlossarioPage},
+      {title: 'Plantio e Manutenção', component: PlantioPage},
+      {title: 'Meu Álbum', component: AlbumPage},
+      {title: 'Editar Perfil', component: PerfilPage},
+      {title: 'Sobre', component: SobrePage},
+      {title: 'Sair', component: LoginPage}
     ];
 
-  }
-
-  initializeApp() {
-    this.platform.ready().then(() => {
+    platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
+      statusBar.styleDefault();
+      splashScreen.hide();
     });
   }
 
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
-    this.nav.setRoot(page.component);
+  openPage(page: {title: string, component: any}): void{
+    this.nav.push(page.component);
   }
+
 }
+

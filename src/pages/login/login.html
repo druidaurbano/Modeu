@@ -1,9 +1,3 @@
-<!--
-  Generated template for the LoginPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
@@ -17,24 +11,21 @@
 
       <img class="marca" src="assets/imgs/marca.png" alt="">
   
-  <ion-item>
-      <ion-label floating>Nome de usuário:</ion-label>
-     <ion-input></ion-input>
+  
+      <ion-item>
+      <ion-label floating posicion >Usuário</ion-label>
+     <ion-input type="text"></ion-input>
    </ion-item>
 
   <ion-item>
-    <ion-label floating>Senha:</ion-label>
+    <ion-label floating>Senha</ion-label>
     <ion-input type="password"></ion-input>
   </ion-item>
 
-  <!-- Botão para fazer login-->
+  <!-- Botão tela login-->
   <div padding>
-    <button type="submit" class="botao"  margin-top ion-button secondary block (click)="goToMenuPage()" round >Entrar</button>
-  </div>
-
-  <!-- link para cadastrar-->
-  <div padding>
-      <button type="submit" ion-button color="danger" block (click)="goToCadastroPage()" clear >Criar uma conta</button>
-      <button type="submit" ion-button color="danger" block (click)="goToMapaPage()" clear >Visualizar mapa</button>
+    <button class="botao" margin-top secondary block ion-button (click)="goToHomePage()" round >Entrar</button>
+    <button class="opcoes" ion-button color="danger" block (click)="goToCadastroPage()" clear >Criar uma conta</button>
+    <button class="opcoes"ion-button color="danger" block (click)="goToMapaPage()" clear >Visualizar mapa</button>
   </div>
 </ion-content>
