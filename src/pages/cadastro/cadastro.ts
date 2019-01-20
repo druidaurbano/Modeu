@@ -3,8 +3,9 @@ import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
-//import { AngularFireAuth } from '@angular/fire/auth';
-//import { auth } from 'firebase/app';
+//firebase
+import { AngularFireAuth } from '@angular/fire/auth';
+
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
@@ -19,7 +20,7 @@ export class CadastroPage {
   constructor(
     public navCtrl: NavController,
     public formbuilder: FormBuilder,
-//    public afAuth: AngularFireAuth
+    public afAuth: AngularFireAuth
   ) {
     this.registerForm = this.formbuilder.group({
       nome: [null, [Validators.required, Validators.minLength(5)]],
@@ -33,6 +34,16 @@ export class CadastroPage {
     })
   }
 
+  submitForm(){
+    this.afAuth.auth.createUserWithEmailAndPassword(
+      this.registerForm.value.email, this.registerForm.value.senha)
+      .then((response) => {
+        console.log('Criou usuario');
+      })
+      .catch((error) => {
+        console.log('Deu erro', error);
+      })
+  }
 
 /*
   submitForm (){

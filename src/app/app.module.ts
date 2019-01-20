@@ -7,6 +7,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 //import {Geolocation} from '@ionic-native/geolocation';
+
+//imports do firebase
+import { AngularFireModule } from '@angular/fire';
+import { environment } from '../environments/environment';
+import { AngularFireAuth } from '@angular/fire/auth';
+
+
+//pages do aplicativo
 import { AlbumPage } from './../pages/album/album';
 import { CadastroPage } from './../pages/cadastro/cadastro';
 import { GlossarioPage } from './../pages/glossario/glossario';
@@ -53,6 +61,7 @@ import { OitiPage } from '../pages/oiti/oiti';
   ],
   imports: [
     BrowserModule,
+    AngularFireModule.initializeApp(environment.firebase),
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -80,6 +89,7 @@ import { OitiPage } from '../pages/oiti/oiti';
   providers: [
     StatusBar,
     SplashScreen,
+    AngularFireAuth,
     // Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
