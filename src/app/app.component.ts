@@ -22,7 +22,7 @@ export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
   pages:[{title: string, component: any}];
-  rootPage = LoginPage;
+  rootPage = GlossarioPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
