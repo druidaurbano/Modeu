@@ -13,6 +13,8 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import { AngularFireAuth } from '@angular/fire/auth';
 
+//imports camera
+import { Camera, CameraOptions } from '@ionic-native/camera';
 
 //pages do aplicativo
 import { AlbumPage } from './../pages/album/album';
@@ -90,6 +92,7 @@ import { OitiPage } from '../pages/oiti/oiti';
     StatusBar,
     SplashScreen,
     AngularFireAuth,
+    Camera,
     // Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

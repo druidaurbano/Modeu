@@ -11,13 +11,11 @@
     <div id="map"></div>
     
     <ion-fab center bottom class="camera">
-        <button ion-fab color="primary">
+        <button ion-fab color="primary" (click)="takePhoto()">
             <ion-icon name="camera"></ion-icon>
         </button>
-
-        <ion-fab-list side="top">
-            <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
-        </ion-fab-list>
     </ion-fab>
+
+    <p allign="center"><img src="{{ myPhoto }}"></p>
 
 </ion-content>
