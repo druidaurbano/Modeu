@@ -10,7 +10,7 @@
         <ion-list>
         <ion-item-divider color="light">Dados Pessoais</ion-item-divider>
 
-        <form novalidate [formGroup]="registerForm">
+        <form novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
         <!-- nome de novo cadastro-->
             <ion-item>
                 <ion-label floating>Nome completo</ion-label>
@@ -33,45 +33,45 @@
                     </ion-select>
             </ion-item>
             
-        <form  novalidate [formGroup]="registerForm">
+        <form  novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
             <!-- CPF-->
             <ion-item>
                 <ion-label floating>CPF</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input type="text" formControlName="cpf"></ion-input>
             </ion-item>
 
             <!-- telefone-->
             <ion-item>
                 <ion-label floating >Telefone</ion-label>
-                <ion-input type="tel"></ion-input>
+                <ion-input type="tel" formControlName="telefone"></ion-input>
             </ion-item>
 
             <!-- endereço-->
             <ion-item>
                 <ion-label floating>Endereço</ion-label>
-                <ion-input type="text"></ion-input>
+                <ion-input type="text" formControlName="endereco"></ion-input>
             </ion-item>
 
             <!-- email-->
             <ion-item>
                 <ion-label floating>Email</ion-label>
-                <ion-input type="email"></ion-input>
+                <ion-input type="email" formControlName="email"></ion-input>
             </ion-item>
 
             <!-- senha-->
             <ion-item>
                 <ion-label floating>Senha para login:</ion-label>
-                <ion-input type="password"></ion-input>
+                <ion-input type="password" formControlName="senha"></ion-input>
             </ion-item>
 
         <!-- repetir senha-->      
             <ion-item>
                 <ion-label floating>repetir senha:</ion-label>
-                <ion-input type="password"></ion-input>
+                <ion-input type="password" formControlName="confirmarsenha"></ion-input>
             </ion-item>
                 
                 <button class="cancel" ion-button clear (click)="popPage()">Cancelar</button>
-                <button class="botao2" ion-button clear (click)="pushPage()">Confirmar</button>
+                <button class="botao2" type="submit" ion-button clear (click)="pushPage()">Confirmar</button>
             <!--margin-top secondary -->
         </form>
         </ion-list>

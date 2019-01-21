@@ -31,8 +31,7 @@ export class MyApp {
       {title: 'Plantio e Manutenção', component: PlantioPage},
       {title: 'Meu Álbum', component: AlbumPage},
       {title: 'Editar Perfil', component: PerfilPage},
-      {title: 'Sobre', component: SobrePage},
-      {title: 'Sair', component: LoginPage}
+      {title: 'Sobre', component: SobrePage}
     ];
 
     platform.ready().then(() => {
@@ -45,6 +44,10 @@ export class MyApp {
 
   openPage(page: {title: string, component: any}): void{
     this.nav.push(page.component);
+  }
+
+  onSair(): void{
+    this.nav.setRoot(LoginPage);
   }
 
 }
