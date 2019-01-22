@@ -19,47 +19,26 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 //pages do aplicativo
 import { AlbumPage } from './../pages/album/album';
 import { CadastroPage } from './../pages/cadastro/cadastro';
+import { DescricaoPage } from './../pages/descricao/descricao';
 import { GlossarioPage } from './../pages/glossario/glossario';
 import { HomePage } from '../pages/home/home';
 import { LoginPage } from './../pages/login/login';
 import { MapaPage } from './../pages/mapa/mapa';
 import { PlantioPage } from './../pages/plantio/plantio';
 
-
-//lista das páginas de Plantas em ordem alfabética
-import { AlfeneiroPage } from './../pages/alfeneiro/alfeneiro';
-import { AroeiraPage } from './../pages/aroeira/aroeira';
-import { CassiaPage } from './../pages/cassia/cassia';
-import { ExtremosaPage } from '../pages/extremosa/extremosa';
-import { IpePage } from '../pages/ipe/ipe';
-import { IperoxoPage } from './../pages/iperoxo/iperoxo';
-import { JacarandaPage } from './../pages/jacaranda/jacaranda';
-import { NoivinhaPage } from './../pages/noivinha/noivinha';
-import { OitiPage } from '../pages/oiti/oiti';
-
-
-
 @NgModule({
   declarations: [
     MyApp,
     AlbumPage,
     CadastroPage,
+    DescricaoPage,
     GlossarioPage,
     HomePage,
     LoginPage,
     MapaPage,
     PlantioPage,
-    AlfeneiroPage,
-    AroeiraPage,
-    CassiaPage,
-    ExtremosaPage,
-    IpePage,
-    IperoxoPage,
-    JacarandaPage,
-    NoivinhaPage,
-    OitiPage,
-    SobrePage,
-    PerfilPage
+    PerfilPage,
+    SobrePage
   ],
   imports: [
     BrowserModule,
@@ -71,22 +50,14 @@ import { OitiPage } from '../pages/oiti/oiti';
     MyApp,
     AlbumPage,
     CadastroPage,
+    DescricaoPage,
     GlossarioPage,
     HomePage,
     LoginPage,
     MapaPage,
     PlantioPage,
-    AlfeneiroPage,
-    AroeiraPage,
-    CassiaPage,
-    ExtremosaPage,
-    IpePage,
-    IperoxoPage,
-    JacarandaPage,
-    NoivinhaPage,
-    OitiPage,
-    SobrePage,
-    PerfilPage
+    PerfilPage,
+    SobrePage
   ],
   providers: [
     StatusBar,
