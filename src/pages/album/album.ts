@@ -1,12 +1,7 @@
+import { ContactProvider, Contact, ContactList } from './../../providers/contact/contact';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
-/**
- * Generated class for the AlbumPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -15,11 +10,37 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class AlbumPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  contacts: ContactList[];
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private contactProvider: ContactProvider,
+    private toast: ToastController) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad AlbumPage');
+  ionViewDidEnter(){
+    this.contactProvider.getAll()
+      .then(results => {
+        this.contacts = results;
+      });
+  }
+
+  addContact(){
+    this.navCtrl.push('EditContactPage');
+  }
+
+  editContact(item: ContactList){
+    this.navCtrl.push('EditContactPage', { key: item.key, contact: item.contact});
+  }
+
+  removeContact(item: ContactList){
+    this.contactProvider.remove(item.key)
+      .then(() => {
+        let index = this.contacts.indexOf(item);
+        this.contacts.splice(index, 1);
+
+        this.toast.create({ message: 'Contato removido!', duration: 3000, position: 'botton'}).present();
+      });
   }
 
 }

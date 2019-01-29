@@ -1,3 +1,4 @@
+import { MeuAlbumPage } from './../pages/meu-album/meu-album';
 import { PerfilPage } from './../pages/perfil/perfil';
 import { SobrePage } from './../pages/sobre/sobre';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -29,7 +30,8 @@ export class MyApp {
     this.pages = [
       {title: 'Glossário', component: GlossarioPage},
       {title: 'Plantio e Manutenção', component: PlantioPage},
-      {title: 'Meu Álbum', component: AlbumPage},
+      {title: 'Álbum', component: AlbumPage},
+      {title: 'Meu álbum', component: MeuAlbumPage},
       {title: 'Editar Perfil', component: PerfilPage},
       {title: 'Sobre', component: SobrePage}
     ];

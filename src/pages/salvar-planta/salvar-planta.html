@@ -1,0 +1,48 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Salvar Planta</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  
+  <ion-item>
+    <ion-label floating center>Nome do Álbum</ion-label>
+    <ion-input type="text"></ion-input>
+  </ion-item>
+
+  <div class="thumbPlanta">
+      <img src="{{fotoPlanta}}">
+  </div>
+
+  <ion-item>
+    <ion-label >Nome da Planta</ion-label>
+      <ion-select [(ngModel)]="especies">
+        <ion-option value="a">Alfeneiro - <i>Ligustrum lucidum</i></ion-option>
+        <ion-option value="b">Aroeira - <i>Schinus terebinthifolius</i></ion-option>
+        <ion-option value="c">Cassia - <i>Cassia spectabilis</i></ion-option>
+        <ion-option value="d">Extremosa - <i>Lagerstroemia indica</i></ion-option>
+        <ion-option value="e">Ipê Amarelo - <i>Handroanthus chrysotrichus</i></ion-option>
+        <ion-option value="f">Ipê Roxo - <i>Tabebuia avellanedae</i></ion-option>
+        <ion-option value="g">Jacaranda Mimoso - <i>Jacaranda mimosifolia</i></ion-option>
+        <ion-option value="h">Noivinha - <i>Euphorbia eucocephala</i></ion-option>
+        <ion-option value="i">Oiti - <i>Licania tomentosa</i></ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-fab right bottom>
+    <button ion-fab color="primary">
+      <ion-icon name="checkmark"></ion-icon>
+    </button>
+  </ion-fab>
+
+  <ion-fab left bottom>
+    <button ion-fab color="primary">
+      <ion-icon name="close"></ion-icon>
+    </button>
+  </ion-fab>  
+
+</ion-content>
