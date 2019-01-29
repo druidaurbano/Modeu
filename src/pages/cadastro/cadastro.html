@@ -8,7 +8,7 @@
 <ion-content>
     
         <ion-list>
-        <ion-item-divider color="light">Dados Pessoais</ion-item-divider>
+            <ion-item-divider color="light" >Dados Pessoais</ion-item-divider>
 
         <form novalidate [formGroup]="registerForm" (ngSubmit)="submitForm()">
         <!-- nome de novo cadastro-->
@@ -71,7 +71,7 @@
             </ion-item>
                 
                 <button class="cancel" ion-button clear (click)="popPage()">Cancelar</button>
-                <button class="botao2" type="submit" ion-button clear (click)="pushPage()">Confirmar</button>
+                <button class="botao2" type="submit" ion-button (click)="pushPage()">Confirmar</button>
             <!--margin-top secondary -->
         </form>
         </ion-list>

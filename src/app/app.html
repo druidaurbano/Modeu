@@ -9,7 +9,7 @@
     <ion-content>
         <ion-list>
             <button ion-item *ngFor="let p of pages" (click)="openPage(p)" menuClose>
-                {{p.title}}
+                <ion-icon name={{p.icone}}></ion-icon> {{p.title}}
             </button>
             <button ion-button class="sair" (click)="onSair()" round menuClose>Sair</button>
         </ion-list>

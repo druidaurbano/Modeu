@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -10,11 +10,16 @@ export class SalvarPlantaPage {
 
   fotoPlanta: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, 
+    public navParams: NavParams,
+    private toast: ToastController) {
     this.fotoPlanta = navParams.get('dataFoto');
 
   }
-
+  
+  salvarFoto(){
+    this.toast.create({message: 'Erro ao salvar o contato!', duration: 3000, position: 'botton'}).present();  
+  }
   
 
 }

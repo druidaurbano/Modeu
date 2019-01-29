@@ -22,18 +22,18 @@ import { PlantioPage } from './../pages/plantio/plantio';
 export class MyApp {
 
   @ViewChild(Nav) nav: Nav;
-  pages:[{title: string, component: any}];
+  pages:[{title: string, component: any, icone: string}];
   rootPage = LoginPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
 
     this.pages = [
-      {title: 'Glossário', component: GlossarioPage},
-      {title: 'Plantio e Manutenção', component: PlantioPage},
-      {title: 'Álbum', component: AlbumPage},
-      {title: 'Meu álbum', component: MeuAlbumPage},
-      {title: 'Editar Perfil', component: PerfilPage},
-      {title: 'Sobre', component: SobrePage}
+      {title: 'Glossário', component: GlossarioPage, icone: 'book'},
+      {title: 'Plantio e Manutenção', component: PlantioPage, icone: 'nutrition'},
+      //{title: 'Álbum', component: AlbumPage, icone: 'checkmark'},
+      {title: 'Meu álbum', component: MeuAlbumPage, icone: 'images'},
+      {title: 'Editar Perfil', component: PerfilPage, icone: 'contact'},
+      {title: 'Sobre', component: SobrePage, icone: 'information-circle'}
     ];
 
     platform.ready().then(() => {
