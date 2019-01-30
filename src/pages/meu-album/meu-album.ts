@@ -13,10 +13,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class MeuAlbumPage {
 
   minhaFoto: any;
+  minhaFotoSalva: any;
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private camera: Camera) {
+      this.minhaFotoSalva = navParams.get('dataFotoSalva');
   }
 
   tirarFoto(){
@@ -42,6 +44,7 @@ export class MeuAlbumPage {
   }
 
   onSalvarPlanta(minhaFoto: any): void{
+    this.navCtrl.pop();
     this.navCtrl.push(SalvarPlantaPage,{dataFoto: minhaFoto});
   }
 

@@ -1,3 +1,4 @@
+import { SalvarPlantaPage } from './../salvar-planta/salvar-planta';
 // import { Geolocation } from '@ionic-native/geolocation';
 import { Component, OnInit } from '@angular/core';
 import { NavController, Loading } from 'ionic-angular';
@@ -22,7 +23,7 @@ declare var google;
 
 export class HomePage implements OnInit{
 
-    myPhoto:any;
+    minhaFoto:any;
 
     /*image: string;
     cameraImage: string;
@@ -59,14 +60,14 @@ export class HomePage implements OnInit{
     async loadMap(){
         //const rta = await this.geolocation.getCurrentPosition();
         const myLatLng = {
-            lat: -23.5635795,
-            lng: -46.656248
+            lat: -2.4187609,
+            lng: -54.7410495
         };
         console.log(myLatLng);
         const mapEle: HTMLElement = document.getElementById('map');
         const map = new google.maps.Map(mapEle,{
             center: myLatLng,
-            zoom: 12
+            zoom: 15
         });
     }
 
@@ -82,10 +83,16 @@ export class HomePage implements OnInit{
           this.camera.getPicture(options).then((imageData) => {
            // imageData is either a base64 encoded string or a file URI
            // If it's base64 (DATA_URL):
-           this.myPhoto = 'data:image/jpeg;base64,' + imageData;
+           this.minhaFoto = 'data:image/jpeg;base64,' + imageData;
+
+           this.onSalvarPlanta(this.minhaFoto);
           }, (err) => {
            // Handle error
           });
     }
+
+    onSalvarPlanta(minhaFoto: any): void{
+        this.navCtrl.push(SalvarPlantaPage,{dataFoto: minhaFoto});
+      }
 
 }

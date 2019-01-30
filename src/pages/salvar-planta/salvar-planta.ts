@@ -1,3 +1,5 @@
+import { MeuAlbumPage } from './../meu-album/meu-album';
+import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 
@@ -14,11 +16,22 @@ export class SalvarPlantaPage {
     public navParams: NavParams,
     private toast: ToastController) {
     this.fotoPlanta = navParams.get('dataFoto');
+    
 
   }
-  
-  salvarFoto(){
-    this.toast.create({message: 'Erro ao salvar o contato!', duration: 3000, position: 'botton'}).present();  
+
+  salvarFoto(): void{
+    this.enviarFoto(this.fotoPlanta);
+  }
+
+  enviarFoto(fotoPlanta: any){
+    this.navCtrl.pop();
+    this.navCtrl.push(MeuAlbumPage,{dataFotoSalva: fotoPlanta});
+    this.toast.create({message: 'Foto Salva', duration: 3000, position: 'botton'}).present();  
+  }
+
+  cancelar(){
+    this.navCtrl.setRoot(HomePage);
   }
   
 
