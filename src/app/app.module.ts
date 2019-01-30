@@ -6,7 +6,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
-import { Geolocation, GeolocationOriginal } from '@ionic-native/geolocation';
+//import {Geolocation} from '@ionic-native/geolocation';
 
 //imports do firebase
 import { AngularFireModule } from '@angular/fire';
@@ -87,7 +87,7 @@ import { SalvarPlantaPage } from '../pages/salvar-planta/salvar-planta';
     SplashScreen,
     AngularFireAuth,
     Camera,
-    //Geolocation,
+    // Geolocation,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     DatePipe,
     ContactProvider
