@@ -1,12 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Storage } from '@ionic/storage';
 
-/**
- * Generated class for the PerfilPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -15,11 +11,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PerfilPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  inputtext: string;
+  key: string = 'username';
+
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    private storage: Storage) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PerfilPage');
+  }
+
+  saveData(){
+    this.storage.set(this.key, this.inputtext);
+  }
+
+  loadData(){
+    this.storage.get(this.key).then((val) =>{
+      console.log('Your username is', val)
+    });
   }
 
 }

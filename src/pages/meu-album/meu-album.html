@@ -1,0 +1,24 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Meu álbum</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <!--<img src="{{minhaFoto}}">-->
+  <p class="fotoSalva">
+    <img src="{{minhaFotoSalva}}">
+  </p>
+
+
+  <ion-fab center bottom>
+    <button ion-fab color="primary" (click)="tirarFoto()">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
